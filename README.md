@@ -71,7 +71,7 @@ This project provides a cost-effective, scalable solution for improving indoor a
 
 # Below is the grafana dashboard for monitoring all the values and detecting mean, last value and anomolies
 ## A spike was seen and it was above the threshold hence flagged by ML
-![Screenshot](grafana dashboard.png)
+![<img src="https://raw.githubusercontent.com/R3d1001/iot_project/refs/heads/main/grafana dashboard.png" alt="ML1" width="500">]
 
 # Drive link for the videos of the iot sensors and raspberry pi
 # https://drive.google.com/drive/folders/1RIWC57bZ8VgbIktY3kUbpnkH0SX6o98l?usp=sharing
