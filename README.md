@@ -64,7 +64,7 @@ This project provides a cost-effective, scalable solution for improving indoor a
 
 #Below are some screenshots of the project
 ##A spike was seen and it was above the threshold hence flagged by ML
-![Screenshot](ml1.jpg)
+[<img src="image-url" alt="Alt text" width="500">](https://raw.githubusercontent.com/R3d1001/iot_project/refs/heads/main/ml1.jpeg)
 
 ##A spike was seen and it was above the threshold hence flagged by ML
 ![Screenshot](ml2.jpg)
