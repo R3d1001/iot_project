@@ -1,3 +1,110 @@
+# Installation & Setup Guide
+
+## 1. Install Arduino IDE
+- Download and install **Arduino IDE** from [official Arduino website](https://www.arduino.cc/en/software).
+- Install **ESP32 board support**:
+  - Open **Preferences** and add the following URL in the "Additional Board Manager URLs":
+    ```
+    https://dl.espressif.com/dl/package_esp32_index.json
+    ```
+  - Go to **Board Manager**, search for "ESP32", and install the package.
+
+## 2. Set Up Raspberry Pi
+- Install **Raspberry Pi OS** using **Raspberry Pi Imager**.
+- Enable SSH for remote access.
+- Install **Python 3** and required libraries:
+  ```bash
+  sudo apt update && sudo apt upgrade -y
+  sudo apt install python3-pip -y
+  pip3 install paho-mqtt influxdb-client
+  ```
+
+## 3. Install Docker & Docker Compose on Raspberry Pi
+- Install **Docker**:
+  ```bash
+  curl -fsSL https://get.docker.com | sh
+  sudo usermod -aG docker $USER
+  ```
+- Install **Docker Compose**:
+  ```bash
+  sudo apt install docker-compose -y
+  ```
+
+## 4. Run InfluxDB & Grafana with Docker Compose
+- Create a `docker-compose.yml` file:
+  ```yaml
+  version: '3'
+  services:
+    influxdb:
+      image: influxdb:latest
+      container_name: influxdb
+      ports:
+        - "8086:8086"
+      environment:
+        - INFLUXDB_DB=air_quality
+        - INFLUXDB_ADMIN_USER=admin
+        - INFLUXDB_ADMIN_PASSWORD=adminpass
+      volumes:
+        - influxdb_data:/var/lib/influxdb
+
+    grafana:
+      image: grafana/grafana
+      container_name: grafana
+      ports:
+        - "3000:3000"
+      environment:
+        - GF_SECURITY_ADMIN_PASSWORD=admin
+      volumes:
+        - grafana_data:/var/lib/grafana
+
+  volumes:
+    influxdb_data:
+    grafana_data:
+  ```
+- Run the containers:
+  ```bash
+  docker-compose up -d
+  ```
+
+## 5. Run `main.py` on Raspberry Pi
+- Navigate to the `client_rasp_pi` directory:
+  ```bash
+  cd ~/iot_project/client_rasp_pi
+  ```
+- Run the script to collect sensor data:
+  ```bash
+  python3 main.py
+  ```
+
+## 6. Program ESP32 with Arduino IDE
+- Open `esp32_dustsensor.ino` in Arduino IDE.
+- Select the **ESP32** board and the correct **COM port**.
+- Install required libraries (`PubSubClient`, `WiFi`, etc.).
+- Upload the sketch to the ESP32 to start reading dust sensor data and send it to **HiveMQTTFX**.
+
+## 7. Run `server.py` to Process Data
+- Navigate to the project directory:
+  ```bash
+  cd ~/iot_project/server
+  ```
+- Run the server script to fetch MQTT data and store it in **InfluxDB**:
+  ```bash
+  python3 server.py
+  ```
+
+## 8. Visualize Data in Grafana
+- Access **Grafana** in a browser: `http://<raspberry-pi-ip>:3000`
+- Login with:
+  - **Username:** `admin`
+  - **Password:** `admin`
+- Add **InfluxDB** as a data source:
+  - URL: `http://influxdb:8086`
+  - Database: `air_quality`
+- Create dashboards and visualize real-time IAQ data.
+
+
+
+
 # Smart Air Quality & Ventilation Monitoring Project Report
 
 ## Problem Statement
