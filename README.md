@@ -9,9 +9,9 @@ The proposed solution involves deploying an IoT-based monitoring system that con
 ## Hardware & Software Details
 ### Hardware:
 - **DHT22** – Temperature & Humidity Sensor
-- **PM2.5 Sensor (PMS5003 or SDS011)** – Airborne particulate matter detection
-- **VOC Sensor (CCS811 or MQ-135)** – Volatile organic compound monitoring
-- **Raspberry Pi 4** – Central processing unit
+- **GP2y10** – Airborne Dust particulate matter detection
+- **VOC Sensor (MQ-135)** – Volatile organic compound monitoring
+- **Raspberry Pi 4-B** – Central processing unit
 - **ESP32** – Wireless sensor nodes for data collection
 
 ### Software & Technology Stack:
@@ -66,12 +66,11 @@ This project provides a cost-effective, scalable solution for improving indoor a
 ## A spike was seen and it was above the threshold hence flagged by ML
 ![<img src="https://raw.githubusercontent.com/R3d1001/iot_project/refs/heads/main/ml1.jpeg" alt="ML1" width="500">]
 
-## A spike was seen and it was above the threshold hence flagged by ML
+## Again a spike was seen but within MSE threshold
 ![<img src="https://raw.githubusercontent.com/R3d1001/iot_project/refs/heads/main/ml2.jpeg" alt="ML2" width="500">]
 
-# Below is the grafana dashboard for monitoring all the values and detecting mean, last value and anomolies
-## A spike was seen and it was above the threshold hence flagged by ML
+## Below is the grafana dashboard for monitoring all the values and detecting mean, last value and anomolies
 ![<img src="https://raw.githubusercontent.com/R3d1001/iot_project/refs/heads/main/grafana dashboard.png" alt="ML1" width="500">]
 
-# Drive link for the videos of the iot sensors and raspberry pi
-# https://drive.google.com/drive/folders/1RIWC57bZ8VgbIktY3kUbpnkH0SX6o98l?usp=sharing
+## Drive link for the videos of the iot sensors and raspberry pi
+### https://drive.google.com/drive/folders/1RIWC57bZ8VgbIktY3kUbpnkH0SX6o98l?usp=sharing
