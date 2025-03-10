@@ -62,16 +62,16 @@ The proposed solution involves deploying an IoT-based monitoring system that con
 
 This project provides a cost-effective, scalable solution for improving indoor air quality through real-time monitoring and predictive analytics.
 
-#Below are some screenshots of the project
-##A spike was seen and it was above the threshold hence flagged by ML
-[<img src="image-url" alt="Alt text" width="500">](https://raw.githubusercontent.com/R3d1001/iot_project/refs/heads/main/ml1.jpeg)
+# Below are some screenshots of the project
+## A spike was seen and it was above the threshold hence flagged by ML
+![<img src="https://raw.githubusercontent.com/R3d1001/iot_project/refs/heads/main/ml1.jpeg" alt="ML1" width="500">]
 
-##A spike was seen and it was above the threshold hence flagged by ML
-![Screenshot](ml2.jpg)
+## A spike was seen and it was above the threshold hence flagged by ML
+![<img src="https://raw.githubusercontent.com/R3d1001/iot_project/refs/heads/main/ml2.jpeg" alt="ML2" width="500">]
 
-##Below is the grafana dashboard for monitoring all the values and detecting mean, last value and anomolies
-##A spike was seen and it was above the threshold hence flagged by ML
+# Below is the grafana dashboard for monitoring all the values and detecting mean, last value and anomolies
+## A spike was seen and it was above the threshold hence flagged by ML
 ![Screenshot](grafana dashboard.png)
 
-#Drive link for the videos of the iot sensors and raspberry pi
-#https://drive.google.com/drive/folders/1RIWC57bZ8VgbIktY3kUbpnkH0SX6o98l?usp=sharing
+# Drive link for the videos of the iot sensors and raspberry pi
+# https://drive.google.com/drive/folders/1RIWC57bZ8VgbIktY3kUbpnkH0SX6o98l?usp=sharing
