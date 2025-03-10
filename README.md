@@ -54,6 +54,7 @@ The proposed solution involves deploying an IoT-based monitoring system that con
 - **Connectivity Issues:** Wireless communication between ESP32 nodes occasionally dropped.
 - **Data Storage Optimization:** Efficiently managing large volumes of time-series data in InfluxDB.
 
+
 ### Future Improvements:
 - **Integration with HVAC Systems:** Automate ventilation control based on IAQ insights.
 - **Extended Deployment:** Expand the system to multiple buildings for a broader impact.
@@ -61,3 +62,16 @@ The proposed solution involves deploying an IoT-based monitoring system that con
 
 This project provides a cost-effective, scalable solution for improving indoor air quality through real-time monitoring and predictive analytics.
 
+#Below are some screenshots of the project
+##A spike was seen and it was above the threshold hence flagged by ML
+![Screenshot](ml1.jpg)
+
+##A spike was seen and it was above the threshold hence flagged by ML
+![Screenshot](ml2.jpg)
+
+##Below is the grafana dashboard for monitoring all the values and detecting mean, last value and anomolies
+##A spike was seen and it was above the threshold hence flagged by ML
+![Screenshot](grafana dashboard.png)
+
+#Drive link for the videos of the iot sensors and raspberry pi
+#https://drive.google.com/drive/folders/1RIWC57bZ8VgbIktY3kUbpnkH0SX6o98l?usp=sharing
